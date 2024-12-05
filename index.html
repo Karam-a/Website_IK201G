@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Glitch 'n' Ditch Studios</title>
+</head>
+
+<body>
+    <div class="headerPage">
+        <header id="headerContainer">
+            <img src="glitchLogotype.png" alt="Glitch n' Ditch Logotype" id="titleIcon">
+            <div class="icon-container">
+                <a href="https://instagram.com/"> <img src="instagram.png" alt="Instagram icon" class="icons"></a>
+                <a href="https://twitter.com"> <img src="twitter.png" alt="Twitter icon" class="icons"></a>
+                <a href="https://discord.com"> <img src="discord.png" alt="Discord icon" class="icons"></a>
+                <a href="https://youtube.com/"> <img src="youtube.png" alt="YouTube Icon" class="icons"></a>
+            </div>
+    
+            <div id="menuToggle" onclick="toggleMenu()">
+                <img src="menuIcon.png" alt="Menu Icon" id="menuIcon">
+            </div>
+                <ul class="listaHeader">
+                    <li class="listaItems"><a href="#app">Games</a></li>
+                    <li class="listaItems"><a href="#aboutUs">About us</a></li>
+                    <li class="listaItems"><a href="#meetTheSquad">Meet us</a><li>
+                    <li class="listaItems"><a href="#form-container">Contact us</a></li>
+                </ul> 
+        </header> 
+    </div>
+
+    <section class="landingView">
+        <div class="slideshow-container"> 
+            <div class="slideVid v1">
+                <video
+                src="Game-WAR.mp4"
+                autoplay
+                loop
+                muted
+                preload="auto"
+                ></video>
+               
+            </div>
+            <div class="slideVid v2">
+                <video
+                src="Game-Dungeon_of_Glitch.mp4"
+                autoplay
+                loop
+                muted
+                preload="auto"></video>
+              
+            </div>
+            <div class="slideVid v3">
+                <video src="Game-Imaginary_Worlds.mp4"
+                autoplay
+                loop
+                muted
+                preload="auto"
+                ></video>
+
+            </div>     
+        </div>
+            <div class="overlay"></div>
+            <h1 class="mainTitle" data-text="Glitch">Glitch 'n' Ditch</h1>
+        
+    </section>
+
+    <section id="aboutUs">
+        <h2 id="whoAreWe"> What's Glitch 'n' Ditch?</h2>
+        <p id="aboutUsText">Glitch n' Ditch is the game studio of the future! With award-winning titles such as WAR: Of Infinity and The Dungeon of Glitch we deliver what gamers want the most; Adrenaline and Adventure! We're a small indie game studio with four employees all striving for perfection! Find our games below!</p>
+    </section>
+
+    
+    <div id="app">
+        <section class="gameShowcase">
+            <h2 class="showcaseHeader"> Take a look at our games! </h2>
+            <div class="logotypeContainer">
+                <div
+                v-for= "(game, index) in games"
+                :key="index"
+                class="gameItem"
+                :class= "{selected: selectedGameIndex === index}"
+                @click="selectGame(index)"
+                ><img :src="game.logo" :alt="game.title" class="gameLogo">
+                </div>
+            </div>
+            <div v-if="selectedGameIndex !== null" class="gameInfoBox" :class="{active: selectedGameIndex !== null}">
+                <h3> {{games[selectedGameIndex].title}}</h3> 
+                <p> {{games[selectedGameIndex].desc}} </p>
+                <a
+                :href="games[selectedGameIndex].link"
+                target="_blank"
+                @mouseenter="setDownloadHover(true)"
+                @mouseleave="setDownloadHover(false)"> 
+                    <img 
+                    :src="downloadImg"
+                    alt="Download on Steam"
+                    class="downloadButton"
+                    :class="{hovered: isDownloadHovered}"
+                    >
+                </a>
+            </div>
+        </section>
+    </div> 
+
+    <section id="meetTheSquad">  
+        <h2 id="squadText">MEET THE SQUAD</h2>
+        <div class="profiles">
+
+            <div class="portraitBox">
+                <div class="profile">
+                    <a href="../teamNinaPage/index1.html">
+                        <img src="cuthbert-CEO.webp" alt="Nina" class="cuthbert">
+                    </a>
+                    <span class="namePopUp">Nina</span>
+                    <span class="positionPopUp">CEO</span>
+                </div>
+            </div>
+            
+            <div class="portraitBox">
+                <div class="profile">
+                    <a href="../teamDalyaPage/index1.html">
+                        <img src="frog-concept_artist.webp" alt="Dalya" class="frog">
+                    </a>
+                    <span class="namePopUp">Dalya</span>
+                    <span class="positionPopUp">Concept Artist</span>
+                </div>
+            </div>
+            
+            <div class="portraitBox">
+                <div class="profile">
+                    <a href="../teamAndreasPage/index1.html">
+                        <img src="Plague-developer.webp" alt="Andreas" class="plague">
+                    </a>
+                    <span class="namePopUp">Andreas</span>
+                    <span class="positionPopUp">Game Dev</span>
+                </div>
+            </div>
+            
+            <div class="portraitBox">
+                <div class="profile">
+                    <a href="../teamKaramPage/index1.html">
+                        <img src="Swamp-CIO.webp" alt="Karam" class="swamp">
+                    </a>
+                    <span class="namePopUp">Karam</span>
+                    <span class="positionPopUp">CIO</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div id="form-container">
+        <h2 id="contactUs">Contact Us</h2>
+        <form id ="contactForm">
+            <div class="form-group">
+                <input type="text" id="name" placeholder="Your name" required/> 
+                <span id="nameError" class="error"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="number" id="phone" placeholder="Your phone number" required/>
+                <span id="phoneError" class="error"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="mail" placeholder="Your Email" required/>
+                <span id="emailError" class="error"></span>
+            </div>
+
+            <div class="form-group">
+                <textarea id="message" placeholder="Your message..." required></textarea>
+            </div>
+
+            <button type="submit" id="submitBtn">Submit</button>
+        </form>
+    </div>
+
+    <div id="submitForm" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Form submitted successfully!</h2>
+            <p>Thank you for contacting us. We will respond as soon as we can! :></p>
+        </div>
+    </div>
+        
+
+
+<footer id="footerPart">
+<div class="flex-container">
+    <div class="footer-item">
+        <p id="footerText">© 2024 Glitch 'n' Ditch Studios. TM Microsoft Corporation</p>
+    </div>
+
+    <div class="footer-item">
+        <ul class="footerButtonUL">
+            <li class="footerItem"><a href="#app">Games</a></li>
+            <li class="footerItem"><a href="#aboutUs">About us</a></li>
+            <li class="footerItem"><a href="#meetTheSquad">Meet us</a></li>
+            <li class="footerItem"><a href="#form-container">Contact us</a></li>
+            </ul>
+    </div>
+
+    <div class="footer-pic">
+        <div class="footerPic">
+            <img src="teen_esrb.png" alt="ESRB" id="footPic">
+        </div>
+    </div>
+</div> 
+
+</footer>
+
+</body>
+</html>

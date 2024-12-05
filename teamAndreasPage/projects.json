@@ -1,0 +1,32 @@
+[
+    {
+        "ID": 1,
+        "Title": "Aetherial Chronicles: The Shattered Realm",
+        "Customer": "Frog Studios",
+        "Description":"A massive open-world RPG where players take on the role of an otherworldly traveler seeking to restore balance to the realms. Featuring a dynamic weather system, character customization, and complex branching storylines, the game allows players to influence the fate of warring kingdoms through strategic alliances and magical combat. Multiplayer co-op and PvP modes enrich the experience."
+    },
+    {
+        "ID": 2,
+        "Title": "Neon Circuit: Cyber Racer",
+        "Customer": "Crazy Games Studios",
+        "Description":"A fast-paced, futuristic racing game set in neon-lit, cyberpunk cities. Players race anti-gravity vehicles through mind-bending tracks filled with obstacles, power-ups, and boosts. The game features both single-player campaigns and online multiplayer tournaments with leaderboards, allowing players to upgrade their vehicles and unlock new, high-speed tech."
+    },
+    {
+        "ID": 3,
+        "Title": "Pixel Forge: Builder Quest",
+        "Customer": "Scooptity Whoop Studios",
+        "Description": "A sandbox adventure game where players gather resources, craft tools, and construct elaborate structures in a procedurally generated 2D pixel world. The game includes survival mechanics, quests, and exploration of dungeons filled with rare items. An emphasis on cooperative multiplayer allows friends to collaborate in building sprawling villages or embarking on quests."
+    },
+    {
+        "ID": 4,
+        "Title": "Echoes of Time: Temporal Shift",
+        "Customer": "Google Studios",
+        "Description": "A puzzle-adventure game where players manipulate time to solve environmental challenges. Set in a world where time anomalies have fractured reality, the player must navigate shifting timelines and solve time-based puzzles to progress. Each level introduces new time manipulation mechanics, such as freezing, rewinding, or fast-forwarding sections of the world to solve intricate puzzles."
+    },
+    {
+        "ID": 5,
+        "Title": "Mech Titans: Last Stand",
+        "Customer": "Moonshine Studios",
+        "Description": "A mech-based tactical shooter where players control customizable giant robots in a post-apocalyptic world. The game combines real-time combat with strategic resource management, allowing players to upgrade their mechs with weapons and armor to survive waves of enemies. Both single-player and multiplayer modes include large-scale battles, base-building mechanics, and team-based PvP combat."
+    }
+]

@@ -1,0 +1,42 @@
+[{
+    "id": 1,
+    "title": "Web Design for SOBRA",
+    "customer": "SOBRA",
+    "link": "https://sobrasektionen.com",
+    "description": "Creating a modernized website for SOBRA, a student union section at Orebro University. This included a complete overhaul of the prior designs, updating information and simplifying the tools used to adminsiter the webpage."
+},
+{
+    "id": 2,
+    "title": "Digital Transformation Initiative",
+    "customer": "Glitch 'n' Ditch Studios",
+    "link":"http://127.0.0.1:5501/index.html",
+    "description": "I spearheaded a comprehensive digital transformation initiative aimed at modernizing our organization’s IT infrastructure. This project involved migrating legacy systems to cloud-based platforms, integrating artificial intelligence (AI) and machine learning (ML) solutions into core business processes."
+},
+{
+    "id": 3,
+    "title": "ERP Implementation",
+    "customer": "Google",
+    "link":"https://about.google/",
+    "description": "I led the full-scale implementation of an ERP system that unified various departments such as finance, HR, and supply chain management under one integrated platform. This project reduced redundancy, improved workflow automation, and enhanced reporting capabilities, leading to more efficient business operations." 
+},
+{
+    "id": 4,
+    "title": "Cybersecurity Enhancement Program",
+    "customer": "Google",
+    "link":"https://about.google/",
+    "description": "In response to growing cybersecurity threats, I developed and rolled out an organization-wide cybersecurity enhancement program. This included strengthening our firewall infrastructure, implementing two-factor authentication (2FA) and raising employee awareness through phishing simulations and training programs." 
+},
+{
+    "id": 5,
+    "title": "Data Compliance Framework",
+    "customer": "Meta Platforms Inc.",
+    "link":"https://about.meta.com/",
+    "description": "I oversaw the establishment of a robust data governance framework that ensured compliance with industry regulations such as GDPR and CCPA. This project involved the creation of data retention policies, enhanced data encryption protocols, and regular audits to ensure compliance."
+},
+{
+    "id": 6,
+    "title": "Workforce Collaboration Tools",
+    "customer": "Nexer Group",
+    "link":"https://nexergroup.com/",
+    "description": "I rolled out a suite of cloud-based collaboration tools, such as Microsoft Teams and Slack, to improve internal communication and project collaboration. This project was particularly crucial during the transition to remote work."
+}]

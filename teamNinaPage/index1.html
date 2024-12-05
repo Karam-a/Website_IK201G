@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title> Nina - Glitch 'n' Ditch Studios</title>
+</head>
+
+<body>
+    <div class="headerPage">
+        <header id="headerContainer">
+            <a href="../index.html"><img src="../glitchLogotype.png" alt="Glitch n' Ditch Logotype" id="titleIcon"></a>
+            <div class="icon-container">
+                <a href="https://instagram.com/"> <img src="../instagram.png" alt="Instagram icon" class="icons"></a>
+                <a href="https://twitter.com"> <img src="../twitter.png" alt="Twitter icon" class="icons"></a>
+                <a href="https://discord.com"> <img src="../discord.png" alt="Discord icon" class="icons"></a>
+                <a href="https://youtube.com/"> <img src="../youtube.png" alt="YouTube Icon" class="icons"></a>
+            </div>
+        
+            <div id="menuToggle" onclick="toggleMenu()">
+                <img src="../menuIcon.png" alt="Menu Icon" id="menuIcon">
+            </div>
+
+
+            <ul class="listaHeader">
+                <li class="listaItems"><a href="../index.html#app">Games</a></li>
+                <li class="listaItems"><a href="../index.html#aboutUs">About us</a></li>
+                <li class="listaItems"><a href="../index.html#meetTheSquad">Meet us</a></li>
+                <li class="listaItems"><a href="../index.html#form-container">Contact us</a></li>
+            </ul>
+
+        </header>
+    </div>
+
+    <section class="memberDescriptionContainer"> 
+       
+        <div class="memberImageWrapper">
+            <div class="memberImage">
+                <img src="../cuthbert-CEO.webp" alt="Nina" class="memberImg">
+            </div>
+        </div>
+
+        <div class="memberDescriptionWrapper">
+            <div class="memberDescription">
+                <h2 id="memberName">Nina Ohannessian</h2>
+                <h3 id="memberAlias"> Aka: "Cuthbert, destroyer of worlds"</h3>
+                <h3 id="memberRole">chief executive officer</h3>  
+                <p id="memberDesc">Cuthbert is the CEO of Glitch 'n' Ditch, she known for her ruthless leadership and love of microtransactions. she rules the gaming industry with an iron tongue. Beneath that slimy exterior is a cold-blooded capitalist who’s always looking to unlock your wallet, one DLC at a time. Her mantra? “If it doesn’t pay, it doesn’t play!” Her employees may dream of escape, but they’re stuck, hopping from one ridiculous idea to the next, all in service of Cuthberts's insatiable greed.
+                </p>
+                
+                
+            </div>
+        </div>
+    </section>
+
+    <section class="myProjectsContainer">
+       
+        <h2 id="picIntro">My art portfolio</h2>
+        <p id="picIntroText">Here is some of my orignial artwork</p>
+        <div class="slideShow-container">
+            <div class="mySlides fade">
+                <div class="numberText">1 / 5</div>
+                <img src="makima.png" alt="bild 1" class="photos">
+                <div class="picText">Original artwork "Makima"</div>
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="numberText">2 / 5</div>
+                <img src="hecate.png" alt="bild 2" class="photos">
+                <div class="picText">Original artwork "Red butterflies"</div>
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="numberText">3 / 5</div>
+                <img src="layla.png" alt="bild 3" class="photos">
+                <div class="picText">Original artwork "Layla"</div>
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="numberText">4 / 5</div>
+                <img src="aki.png" alt="bild 4" class="photos">
+                <div class="picText">Original artwork "Aki"</div>
+            </div> 
+
+            <div class="mySlides fade">
+                <div class="numberText">5 / 5</div>
+                <img src="redLady.png" alt="bild 5" class="photos">
+                <div class="picText">original artwork "A killers glare"</div>
+            </div>
+    
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094</a>
+        <a class="next" onclick="plusSlides(+1)">&#10095</a>
+    </div>
+
+
+    <h2 id="myProjectsTitleHeading">My Projects</h2> 
+    </section>
+
+    <div id="app">
+        <div v-for="item in text">
+        <p>Project: {{item.id}}</p>
+        <p>Tittle: {{item.title}}</p>
+        <p>Customer: {{item.customer}}</p>
+        <p>Description: {{item.description}}</p>
+        </div>
+    </div>
+
+    <footer id="footerPart">
+        <div class="flex-container">
+            <div class="footer-item">
+                <p id="footerText">© 2024 Glitch 'n' Ditch Studios. TM Microsoft Corporation</p>
+            </div>
+            <div class="footer-item">
+                <ul class="footerButtonUL">
+                    <li class="footerItem"><a href="../index.html#app">Games</a></li>
+                    <li class="footerItem"><a href="../index.html#aboutUs">About us</a></li>
+                    <li class="footerItem"><a href="../index.html#meetTheSquad">Meet us</a></li>
+                    <li class="footerItem"><a href="../index.html#form-container">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="footer-pic">
+                <div class="footerPic">
+                    <img src="../teen_esrb.png" alt="ESRB" id="footPic">
+                </div>
+            </div>
+        </div> 
+    </footer>
+
+</body>
+
+</html>

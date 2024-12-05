@@ -1,0 +1,32 @@
+[
+{
+    "id": 1,
+    "title": "3:18",
+    "customer": "Kytot animation",
+    "description": "3:18 is a game that invites you to explore your creative mind and abilities. With limitless possibilities, there is no right or wrong way to play this game. The ultimate goal is to unleash your creativity and craft your own unique art<3"
+},
+{
+    "id": 2,
+    "title": "Girl in red",
+    "customer": "Mappa studio",
+    "description": "Girl in red is an atmospheric indie game, where you, as the main character, explore a forgotten city in search of the mysterious “Girl in Red.” Navigate through abandoned streets, uncover hidden secrets, and piece together the city’s haunting past as you journey to find her" 
+},
+{
+    "id": 3,
+    "title":"Star girl",
+    "customer": "Wit studio",
+    "description": "Star girl is a magical fantasy indie game where you embark on a celestial adventure as a young girl with the power to control stardust. Explore enchanted world, solve cosmic puzzles, and harness the stars’ energy to restore balance to a universe on the brink of darkness"
+},
+{
+    "id": 4,
+    "title": "Lost soul",
+    "customer": "Studio ghibli",
+    "description": "Lost soul is a whimsical adventure game where you play as a wandering spirit, lost in a mystical forest filled with magical creatures and forgotten gods. Guided by an ancient spirit, you must uncover the secrets of the past, restore harmony to the forest, and find your way back to the world of the living"
+},
+{
+    "id": 5,
+    "title": "white blood",
+    "customer": "Studio trigger",
+    "description": "White blood is a fast-paced indie game where you play as a heroic white blood cell on a mission to fight off mischievous germs in the human body. With outrageous power-ups, hilarious enemies, and unexpected challenges (like dodging a caffeine rush), it’s a comically over-the-top adventure to save the day—one sneeze at a time"
+}
+]

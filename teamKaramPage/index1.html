@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title> Karam - Glitch 'n' Ditch Studios</title>
+</head>
+
+<body>
+    <div class="headerPage">
+        <header id="headerContainer">
+            <a href="../index.html"><img src="../glitchLogotype.png" alt="Glitch n' Ditch Logotype" id="titleIcon"></a>
+            <div class="icon-container">
+                <a href="https://instagram.com/"> <img src="../instagram.png" alt="Instagram icon" class="icons"></a>
+                <a href="https://twitter.com"> <img src="../twitter.png" alt="Twitter icon" class="icons"></a>
+                <a href="https://discord.com"> <img src="../discord.png" alt="Discord icon" class="icons"></a>
+                <a href="https://youtube.com/"> <img src="../youtube.png" alt="YouTube Icon" class="icons"></a>
+            </div>
+        
+            <div id="menuToggle" onclick="toggleMenu()">
+                <img src="../menuIcon.png" alt="Menu Icon" id="menuIcon">
+            </div>
+
+
+            <ul class="listaHeader">
+                <li class="listaItems"><a href="../index.html#app">Games</a></li>
+                <li class="listaItems"><a href="../index.html#aboutUs">About us</a></li>
+                <li class="listaItems"><a href="../index.html#meetTheSquad">Meet us</a></li>
+                <li class="listaItems"><a href="../index.html#form-container">Contact us</a></li>
+            </ul>
+
+        </header>
+    </div>
+
+    <section class="memberDescriptionContainer">
+    <div id="app">
+
+    <div class="backgroundContainer">
+        <div class="memberImageWrapper"> 
+            <div class="memberImage">
+                <img src="../Swamp-CIO.webp" alt="Karam" class="memberImg">
+            </div>
+        </div>
+
+        <div class="memberDescriptionWrapper">
+            <div class="memberDescription">
+                <h2 id="memberName"> Karam Al-Akhras </h2>
+                <h3 id="memberAlias"> Aka: "Swamp Frog"</h3>
+                <h3 id="memberRole"> Chief Information Officer </h3>  
+                <p id="memberDesc"> The digital dungeon master of Glitch n' Ditch's infrastructure, ensuring our creative geniuses have all the tools they need to craft mind-blowing games! When I'm not wrangling servers, you'll find me beta-testing our latest creations. At Glitch n' Ditch, we're not just making games - we're revolutionizing reality, one adrenaline rush at a time!</p>
+            </div>
+        </div>
+
+        <div class="skillbarContainer">
+            <h3 id="skillsTitle">Skills</h3>
+            <div class="skill">
+                <p>IT Planning & Management</p>
+                <div class="skillBar">
+                    <div id="skillBar1Level"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <p>InfoSec Management</p>
+                <div class="skillBar">
+                    <div id="skillBar2Level"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <p>Regulatory Compliance</p>
+                <div class="skillBar">
+                    <div id="skillBar3Level"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <p>DevOps</p>
+                <div class="skillBar">
+                    <div id="skillBar4Level"></div>
+                </div>
+            </div>
+
+            <div class="skill">
+                <p>ITIL</p>
+                <div class="skillBar">
+                    <div id="skillBar5Level"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="projectPreviewContainer">
+            <h2 id="myProjectsTitle">My Projects</h2>
+            <div class="projectControls">
+                <input v-model="searchQuery" placeholder="Seach by title, customer or description" class="searchInput">
+                <select v-model="sortBy" class="sortSelection">
+                    <option value="titleAsc">Title (A-Z)</option>
+                    <option value="titleDesc">Title (Z-A)</option>
+                    <option value="customerAsc">Customer (A-Z)</option>
+                    <option value="customerDesc">Customer (Z-A)</option>
+                </select>
+            </div>
+            <div class="projectList">
+                <div v-for="project in getFilteredAndSortedProjects()" :key="project.id" class="projectItem">
+                    <h3>{{project.title}}</h3>
+                    <p>Customer: {{project.customer}}</p>
+                    <p>{{project.description}}</p>
+                    <a :href="project.link" target="_blank">Link to project!</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+    </section>
+
+    <section class="imageSlideshow">
+        <h2 id="imageSlideshowTitle">Slideshow of places I've been. </h2>
+        <div class="imageSlideshowContainer">
+            <img src="img1.jpg" alt="Me in Stockholm" class="slide">
+            <img src="img2.jpg" alt="Me in Gothenburg" class="slide">
+            <img src="img3.jpg" alt="Me in Malmo" class="slide">
+            <img src="img4.jpg" alt="Me in Orebro" class="slide">
+            <img src="img5.jpg" alt="Me in Koping" class="slide">
+        </div>
+        <div class="imageSlideshowControl">
+            <button class="back">&#8592;</button>
+            <button class="forward">&#8594;</button>
+        </div>
+    </div>
+    </section>
+
+    <footer id="footerPart">
+        <div class="flex-container">
+            <div class="footer-item">
+                <p id="footerText">© 2024 Glitch 'n' Ditch Studios. TM Microsoft Corporation</p>
+            </div>
+            <div class="footer-item">
+                <ul class="footerButtonUL">
+                    <li class="footerItem"><a href="../index.html#app">Games</a></li>
+                    <li class="footerItem"><a href="../index.html#aboutUs">About us</a></li>
+                    <li class="footerItem"><a href="../index.html#meetTheSquad">Meet us</a></li>
+                    <li class="footerItem"><a href="../index.html#form-container">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="footer-pic">
+                <div class="footerPic">
+                    <img src="../teen_esrb.png" alt="ESRB" id="footPic">
+                </div>
+            </div>
+        </div> 
+    </footer>
+
+</body>
+</html>

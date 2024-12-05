@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script defer src="script.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title> Dalya - Glitch 'n' Ditch Studios</title>
+</head>
+
+<body>
+    <div class="headerPage">
+        <header id="headerContainer">
+            <a href="../index.html"><img src="../glitchLogotype.png" alt="Glitch n' Ditch Logotype" id="titleIcon"></a>
+            <div class="icon-container">
+                <a href="https://instagram.com/"> <img src="../instagram.png" alt="Instagram icon" class="icons"></a>
+                <a href="https://twitter.com"> <img src="../twitter.png" alt="Twitter icon" class="icons"></a>
+                <a href="https://discord.com"> <img src="../discord.png" alt="Discord icon" class="icons"></a>
+                <a href="https://youtube.com/"> <img src="../youtube.png" alt="YouTube Icon" class="icons"></a>
+            </div>
+        
+            <div id="menuToggle" onclick="toggleMenu()">
+                <img src="../menuIcon.png" alt="Menu Icon" id="menuIcon">
+            </div>
+
+
+            <ul class="listaHeader">
+                <li class="listaItems"><a href="../index.html#app">Games</a></li>
+                <li class="listaItems"><a href="../index.html#aboutUs">About us</a></li>
+                <li class="listaItems"><a href="../index.html#meetTheSquad">Meet us</a></li>
+                <li class="listaItems"><a href="../index.html#form-container">Contact us</a></li>
+            </ul>
+
+        </header>
+    </div>
+
+    <section class="memberDescriptionContainer">
+       
+        <div class="memberImageWrapper"> 
+            <div class="memberImage">
+                <img src="../frog-concept_artist.webp" alt="Dalya" class="memberImg">
+            </div>
+        </div>
+
+        <div class="memberDescriptionWrapper">
+            <div class="memberDescription">
+                <h2 id="memberName"> Dalya Altorok </h2>
+                <h3 id="memberAlias"> Aka: "Frog" </h3>
+                <h3 id="memberRole"> Concept Artist </h3>  
+                <p id="memberDesc"> Meet Dalya the Frog, the slightly unhinged concept artist at Glitch 'n' Ditch Studios. Armed with a sketchpad in one webbed hand and a dubious amount of caffeine in the other, she crafts game worlds as vivid as her own fever dreams. Between brainstorming sessions and existential crises, she swears her croaks are getting louder — but that’s probably just the lack of sleep... right? Someone please check on her. </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="myProjectsContainer">
+        <h2 id="myPortfolio">My Portfolio</h2>
+        <p id="portDescr">Below is a slideshow containing a few pieces of fully rendered original artwork that I've done over the past year!</p>
+        
+        <div class="slide-container"> 
+        <div class="photos fade">
+            <img src="cosmic.png" alt="photo1">
+            <div class="textDescr">Original Artwork 'Cosmic'</div>
+            <div class="slideNumber">1 / 5</div>
+        </div>
+
+        <div class="photos">
+            <img src="hecate.png" alt="photo2">
+            <div class="textDescr">Illustration for a friend 'Hecate'</div>
+            <div class="slideNumber">2 / 5</div>
+        </div>
+
+        <div class="photos">
+            <img src="narvi.png" alt="photo3">
+            <div class="textDescr">Original character 'Narvi'</div>
+            <div class="slideNumber">3 / 5</div>
+        </div>
+
+        <div class="photos">
+            <img src="my1.png" alt="photo4">
+            <div class="textDescr">Illustration for a friend 'Alma'</div>
+            <div class="slideNumber">4 / 5</div>
+        </div>
+
+        <div class="photos">
+            <img src="jupiter.png" alt="photo5">
+            <div class="textDescr">Original character 'Jupiter'</div>
+            <div class="slideNumber">5 / 5</div>
+         </div>
+
+         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+         <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+         <h2 id="myProjectsTitleHeading">My Projects</h2>
+        </div>
+    </section>
+
+    <div id="app">
+        <div v-for="item in projects">
+            <p>Project: {{item.id}}</p>
+            <p>Customer: {{item.customer}}</p>
+            <p>Title: {{item.title}}</p>
+            <p>Description: {{item.description}}</p>
+        </div>
+    </div>
+
+    <footer id="footerPart">
+        <div class="flex-container">
+            <div class="footer-item">
+                <p id="footerText">© 2024 Glitch 'n' Ditch Studios. TM Microsoft Corporation</p>
+            </div>
+            <div class="footer-item">
+                <ul class="footerButtonUL">
+                    <li class="footerItem"><a href="../index.html#app">Games</a></li>
+                    <li class="footerItem"><a href="../index.html#aboutUs">About us</a></li>
+                    <li class="footerItem"><a href="../index.html#meetTheSquad">Meet us</a></li>
+                    <li class="footerItem"><a href="../index.html#form-container">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="footer-pic">
+                <div class="footerPic">
+                    <img src="../teen_esrb.png" alt="ESRB" id="footPic">
+                </div>
+            </div>
+        </div> 
+    </footer>
+</body>
+</html>

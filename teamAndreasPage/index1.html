@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+    <title> Andreas - Glitch 'n' Ditch Studios</title>
+</head>
+
+<body>
+    <div class="headerPage">
+        <header id="headerContainer">
+            <a href="../index.html"><img src="../glitchLogotype.png" alt="Glitch n' Ditch Logotype" id="titleIcon"></a>
+            <div class="icon-container">
+                <a href="https://instagram.com/"> <img src="../instagram.png" alt="Instagram icon" class="icons"></a>
+                <a href="https://twitter.com"> <img src="../twitter.png" alt="Twitter icon" class="icons"></a>
+                <a href="https://discord.com"> <img src="../discord.png" alt="Discord icon" class="icons"></a>
+                <a href="https://youtube.com/"> <img src="../youtube.png" alt="YouTube Icon" class="icons"></a>
+            </div>
+        
+            <div id="menuToggle" onclick="toggleMenu()">
+                <img src="../menuIcon.png" alt="Menu Icon" id="menuIcon">
+            </div>
+
+
+            <ul class="listaHeader">
+                <li class="listaItems"><a href="../index.html#app">Games</a></li>
+                <li class="listaItems"><a href="../index.html#aboutUs">About us</a></li>
+                <li class="listaItems"><a href="../index.html#meetTheSquad">Meet us</a></li>
+                <li class="listaItems"><a href="../index.html#form-container">Contact us</a></li>
+            </ul>
+
+        </header>
+    </div>
+
+    <section class="memberDescriptionContainer"> 
+       
+        <div class="memberImageWrapper"> 
+            <div class="memberImage">
+                <img src="../Plague-developer.webp" alt="Andreas" class="memberImg">
+            </div>
+        </div>
+
+        <div class="memberDescriptionWrapper">
+            <div class="memberDescription">
+                <h2 id="memberName">Andreas Pihlgren</h2>
+                <h3 id="memberAlias"> AKA: "Plague Frog, The Poisonous"</h3>
+                <h3 id="memberRole"> Game Developer </h3>  
+                <p id="memberDesc"> Once cursed by medieval plagues, now cursed with the ability to code. Plague Frog hops between bugs (literally) and fixes them faster than a frog snatches flies. When not crafting games, they're pondering swamp physics and coding leech-based microtransactions. Warts and all, this dev's got game!
+
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="myProjectsContainer">
+        <h2 id="myProjectsTitleHeading">My Games @ Glitch n' Ditch</h2>
+        
+
+    </section>
+
+    <div class="slideshow-container">
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        
+        <div class="mySlides fade">
+            <img src="froggame.jpg" alt="frog flappy" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="cowboygame.jpg" alt="cowboy" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="cargame.jpg" alt="car" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="detectivegame.jpg" alt="frog leap" style="width:100%">
+        </div>
+
+        <div class="mySlides fade">
+            <img src="wargame.jpg" alt="war" style="width:100%">
+        </div>
+
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <h1 class="projects">My Prior Projects</h1>
+
+    <div id="app">
+        <div v-for="item in projects">
+            <p>{{item.ID}}</p>
+            <p>{{item.Title}}</p>
+            <p>Customer: {{item.Customer}}</p>
+            <p>{{item.Description}}</p>
+        </div>
+    </div>
+
+
+
+    <footer id="footerPart">
+        <div class="flex-container">
+            <div class="footer-item">
+                <p id="footerText">© 2024 Glitch 'n' Ditch Studios. TM Microsoft Corporation</p>
+            </div>
+            <div class="footer-item">
+                <ul class="footerButtonUL">
+                    <li class="footerItem"><a href="../index.html#app">Games</a></li>
+                    <li class="footerItem"><a href="../index.html#aboutUs">About us</a></li>
+                    <li class="footerItem"><a href="../index.html#meetTheSquad">Meet us</a></li>
+                    <li class="footerItem"><a href="../index.html#form-container">Contact us</a></li>
+                </ul>
+            </div>
+        </div> 
+    </footer>
+
+</body>
+
+</html>

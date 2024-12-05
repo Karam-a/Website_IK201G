@@ -1,0 +1,539 @@
+/* Header & meny*/
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    font-family: 'Open Sans';
+    color: white;
+}
+
+#headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: absolute;
+    z-index: 9;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.icon-container {
+    display: flex;
+    gap: 1rem;
+    margin-left: 2rem;
+}
+
+.icons {
+    width: 2.5rem;
+    margin-left: auto;
+}
+
+#titleIcon {
+    width: 8rem;
+    height: auto;
+}
+
+.listaHeader {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin-left: auto;
+    margin-right: 2rem;
+}
+
+.listaItems a {
+    font-size: 150%;
+    color: white;
+    cursor: pointer;
+    white-space: nowrap;
+    padding: 0.5rem 1rem;
+}
+
+.listaHeader a:link {
+    text-decoration: none;
+} 
+
+.listaHeader a:hover {
+    text-decoration: underline;
+}
+
+#menuIcon {
+    display: none;
+}
+/*---------------------------------------------------*/
+/* Member Description Container; bild och information om dig */
+
+.memberDescriptionContainer{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 2rem;
+    padding-top: 6rem;
+    max-width: 1200px; 
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.backgroundContainer{
+    background-color: #2a3329;
+    border-radius: 5px;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: flex-start;
+}
+
+.memberImageWrapper{
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    flex-shrink: 0;
+}
+
+.memberImage{
+    padding-top: 4rem;
+    position: relative;
+}
+
+
+.memberImg{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.memberDescriptionWrapper{
+    flex: 1;
+    min-width: 300px;
+    margin-right: 2rem;
+}
+
+.memberDescription{
+    display: flex;
+    flex-direction: column;
+}
+
+#memberName{
+    color: #00b3ff;
+    font-size: 2.5rem;
+    margin-bottom: 0.3rem;
+}
+
+#memberAlias{
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.2rem;
+    color: #dbf9d8;
+    
+}
+
+#memberRole{
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #dbf2ff;
+}
+
+#memberDesc{
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.skillContainer{
+    width: 100%;
+    max-width: 600px;
+    margin-top: 0;
+    padding: 0 1rem;
+}
+
+#skillsTitle{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #dbf2ff;
+}
+.skill{
+    margin-bottom: 1.5rem;
+}
+
+.skill p{
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.skillBar{
+    height: 1rem;
+    background-color: black;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+#skillBar1Level, #skillBar2Level, 
+#skillBar3Level, #skillBar4Level, 
+#skillBar5Level{
+    height: 100%;
+    background-color: #4caf50;
+    border-radius: 10px;
+    animation: fillSkillBar 2s ease-out;
+} 
+
+#skillBar1Level{
+    width: 95%;
+}
+#skillBar2Level{
+    width: 89%;
+}
+#skillBar3Level{
+    width: 79%;
+}
+#skillBar4Level{
+    width: 75%;
+}
+#skillBar5Level{
+    width: 70%;
+}
+@keyframes fillSkillBar{
+    0% {
+        width: 0;
+    }
+}
+
+.projectPreviewContainer{
+    width: 100%;
+    max-width: 800px;
+    margin-top: 0;
+    margin-left: 1rem;
+}
+
+#myProjectsTitle{
+    color: #dbf2ff;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.projectControls{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.searchInput, .sortSelection{
+    padding: 0.5rem;
+    border: 1px solid #4caf50;
+    border-radius: 4px;
+    background-color: #2a3329;
+    color: white;
+    width: 15rem;
+}
+
+.projectList{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.projectItem{
+    background-color: #2a3329;
+    border: 1px solid #4caf50;
+    border-radius: 4px;
+    padding: 1rem;
+}
+
+.projectItem h3{
+    color: #00b3ff;
+    margin-top: 0;
+}
+
+.projectItem a{
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: #4caf50;
+}
+
+.projectItem a:hover{
+    text-decoration: underline;
+}
+/*---------------------------------------------------*/
+/* Bildspel med animation*/
+.imageSlideshow{
+    max-width: 800px;
+    margin: 2rem auto;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.imageSlideshow.visible{
+    opacity: 1;
+}
+
+#imageSlideshowTitle{
+    text-align: center;
+    color: #dbf2ff;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.imageSlideshowContainer{
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slide{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    object-fit: cover;
+}
+
+.slide.active{
+    opacity: 1;
+}
+
+.imageSlideshowControl{
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.imageSlideshowControl button{
+    background-color: #2a3329;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+/*---------------------------------------------------*/
+/* Footer */
+#footerPart {
+    background: linear-gradient(to top, #2a3329, black 100%);
+    padding: 1rem;
+    height: 10rem;
+    display: flex;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.footerButtonUL {
+    display: flex;
+    list-style: none;
+    padding: 2rem;
+    margin: 1rem 2rem;
+}
+
+.footerItem {
+    display: inline-block;
+    margin: 0.5rem 1.5rem;
+    width: 100px;
+}
+
+#footerPart a:link, #footerPart a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+#footerPart a:hover {
+    text-decoration: underline;
+}
+
+#footerText {
+    position: static;
+    margin-bottom: 1rem;
+    font-size: 12px;
+    width: 410px;
+}
+
+#footPic {
+    width: 5rem;
+    float: right;
+}
+/*---------------------------------------------------*/
+
+/* Media query för klienter under 800px width på viewport*/
+@media only screen and (max-width: 800px) {
+   
+   /*header & Meny*/
+    #headerContainer {
+        position: relative;
+    }
+
+    .listaHeader {
+        display: none;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        padding: 1rem;
+    }
+
+    #menuIcon {
+        display: block;
+        width: 3rem;
+        margin-left: auto;
+        margin-top: -0.25rem;
+    }
+
+    #menuToggle {
+        cursor: pointer;
+        margin-left: auto;
+        z-index: 11;
+    }
+    
+    .listaHeader {
+        display: none;
+        flex-direction: column;
+        list-style: none;
+        gap: 12px;
+        position: absolute;
+        right: -12px;
+        background-color: rgba(0,0,0,0.8);
+        opacity: 0;
+        transition: opacity 0.5s ease, transform 0.5s ease;
+        z-index: 10;
+        width: auto;
+    } 
+     
+    .show-menu .listaHeader {
+        display: flex;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    #titleIcon {
+        width: 10rem;
+    }
+    /*------------------------------------------------------*/
+
+    /* Member Description Container; Bild och information om dig */
+
+    .body{
+        overflow-x: hidden;
+    }
+    .memberDescriptionContainer{
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .backgroundContainer{
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        width: 100%;
+        margin: 0;
+    }
+
+    .memberImageWrapper{
+        margin-right: 0;
+        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+    .memberImage{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%;
+    }
+
+    .memberImg{
+        max-width: 100%;
+        height: auto;
+    }
+
+    .memberDescriptionWrapper{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .memberDescription{
+        width: 100%;
+        max-width: 500px;
+    }
+
+    #memberName, #memberAlias, #memberRole, #memberDesc{
+        text-align: center;
+    }
+    #memberName{
+        font-size: 2rem;
+    }
+
+    #memberAlias{
+        font-size: 1.3rem;
+    }
+
+    #memberRole{
+        font-size: 1.1rem;
+    }
+
+
+    .skillContainer{
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .projectPreviewContainer{
+        margin-top: 1rem;
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .projectControls{
+        flex-direction: column;
+    }
+
+    .searchInput{
+        width: 20rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .sortSelection{
+        width: 10rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .projectList{
+        grid-template-columns: 1fr;
+    }
+
+    .projectItem{
+        width: 95%;
+        box-sizing: border-box;
+    }
+
+    /*------------------------------------------------------*/
+    /* Bildspel med animation*/
+
+    .imageSlideshow{
+        max-width: 100%;
+        padding: 0 1rem;
+    }
+
+    .imageSlideshowContainer{
+        height: 300px;
+    }
+
+    /*------------------------------------------------------*/
+    /* Footer */
+    .footerButtonUL {
+        flex-wrap: wrap;
+    }
+
+    #footPic {
+        display: none;
+    }
+}
